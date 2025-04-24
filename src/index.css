@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('./assets/fonts/MiFuente.woff2') format('woff2'),
+         url('./assets/fonts/MiFuente.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+  .group:hover .group-hover\:text-shadow-gold {
+    text-shadow: 0 0 8px #D4AF37;
+  }
+  
