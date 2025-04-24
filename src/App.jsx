@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 
 import ScrollToTop from './components/ScrollToTop';
 import WhatsappButton from './components/WhatsappButton';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar';
 import Footer from './components/Footer';
 
 const App = () => {
