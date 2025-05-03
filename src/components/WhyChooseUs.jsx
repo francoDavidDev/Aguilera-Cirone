@@ -11,8 +11,8 @@ import imagen4 from '../assets/imgs/whychooseus/imagen4.png'
 const items = [
   {
     icon: <FaUserTie className="text-5xl text-[#999] mb-6" />,
-    text: "Soluciones personalizadas con",
-    bold: "expertise",
+    text: "Formas de pago en",
+    bold: "Efectivo, Transferencia y Cuotas",
   },
   {
     icon: <GiJusticeStar className="text-5xl text-[#999] mb-6" />,
@@ -36,7 +36,7 @@ const galleryStrip = [
 const Highlights = () => {
   return (
     <motion.section 
-      id="highlights" 
+      id="why" 
       className="min-h-screen bg-white text-[#1A2238] py-24 px-6"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -62,7 +62,7 @@ const Highlights = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-serif font-bold mb-6"
         >
-          Razones para elegirnos
+          ¿Qué hacemos?
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ const Highlights = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-[#444] text-lg font-sans max-w-3xl mx-auto mb-2 leading-relaxed"
         >
-          Sabemos que no somos el único estudio de abogados de la zona, pero sí hacemos parte de uno de los mejores, gracias al equipo humano con el que contamos, ampliamente calificado en cada uno de los procesos que llevamos a cabo.
+          Cubrimos los requerimientos legales ante diversas situaciones. Nos caracterizamos por ofrecer un trabajo de calidad, basado en principios esenciales: <strong>honestidad, innovación, perseverancia, análisis minucioso del derecho</strong> y las <strong>ganas continuas de superación</strong>.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ const Highlights = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#444] text-lg font-sans max-w-3xl mx-auto leading-relaxed"
         >
-          Visítenos pronto y permítanos brindarle asesoría personalizada sobre el tema de su interés. Recuerde que somos expertos en sucesiones.
+          Estos fundamentos hacen que nuestro trabajo satisfaga los pedimentos de nuestros representados, con quienes mantenemos una relación basada en la <strong>confianza, el respeto y la empatía</strong>.
         </motion.p>
       </motion.div>
 

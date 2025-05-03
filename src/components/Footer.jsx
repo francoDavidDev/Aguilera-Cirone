@@ -34,22 +34,30 @@ const Footer = () => {
       >
         <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start">
           <img src={logo} alt="Logo del Estudio" className="w-28 mb-3" />
-          <h4 className="font-bold text-white mb-2 tracking-wide text-lg">Martínez Garraza Abogados</h4>
+          <h4 className="font-bold text-white mb-2 tracking-wide text-lg">Aguilera & Cirone Abogados</h4>
           <p className="text-gray-300">Estudio Jurídico</p>
         </motion.div>
 
         <motion.div variants={itemVariants}>
           <p className="text-white font-medium mb-1">Dirección:</p>
-          <p className="text-gray-300">Av. Ejemplo 123</p>
-          <p className="text-gray-300">Buenos Aires, Argentina</p>
+          <p className="text-gray-300">Argentina</p>
+          <p className="text-gray-300">Buenos Aires, CABA</p>
         </motion.div>
 
         <motion.div variants={itemVariants}>
           <p className="text-white font-medium mb-1">Contacto:</p>
-          <p className="text-gray-300">Teléfono: +54 11 1234-5678</p>
-          <p className="text-gray-300">Email: contacto@martinezgarraza.com</p>
-          <p className="text-white font-medium mt-4 mb-1">Horario:</p>
-          <p className="text-gray-300">Lunes a Viernes: 09:00 - 17:00</p>
+          <p className="text-gray-300">
+            <a
+              href="https://wa.me/541165683058"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-[#b08d57]"
+            >
+              Teléfono: +54 11 6568-3058
+            </a>
+          </p>
+          <p className="text-gray-300">Email: estudioagileracigore@gmail.com</p>
+      
         </motion.div>
       </motion.div>
 

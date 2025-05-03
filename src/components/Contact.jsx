@@ -3,10 +3,6 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaEnvelope,
-  FaFacebookF,
-  FaTwitter,
-  FaPinterestP,
-  FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
 
@@ -50,15 +46,23 @@ const Contact = () => {
           {[
             {
               icon: <FaPhoneAlt className="text-[#b08d57] text-2xl mb-2 mx-auto" />,
-              lines: ["Teléfono: +54 11 1234-5678", "Teléfono: +54 11 4321-8765"],
+              lines: [
+                <a key="tel" href="https://wa.me/541165683058" target="_blank" rel="noopener noreferrer" className="underline text-[#b08d57]">
+                  +54 11 6568-3058
+                </a>,
+              ],
             },
             {
               icon: <FaMapMarkerAlt className="text-[#b08d57] text-2xl mb-2 mx-auto" />,
-              lines: ["Av. Ejemplo 123", "Buenos Aires, Argentina"],
+              lines: ["Argentina", "Buenos Aires, CABA"],
             },
             {
               icon: <FaEnvelope className="text-[#b08d57] text-2xl mb-2 mx-auto" />,
-              lines: ["contacto@aguilera_cirone.com", "estudiolegal@abogados.com"],
+              lines: [
+                <a key="mail" href="mailto:estudioagileracigore@gmail.com" className="underline text-[#b08d57]">
+                  estudioagileracigore@gmail.com
+                </a>,
+              ],
             },
           ].map((item, i) => (
             <motion.div key={i} variants={fadeInUp}>
@@ -120,7 +124,7 @@ const Contact = () => {
         variants={fadeInUp}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
-        <h4 className="text-[#b08d57] italic mb-4">¡Seguinos en redes!</h4>
+        <h4 className="text-[#b08d57] italic mb-4">¡Seguinos en Instagram!</h4>
         <motion.div
           className="flex justify-center gap-4 text-white text-lg"
           initial="hidden"
@@ -129,11 +133,15 @@ const Contact = () => {
           variants={fadeIn}
           transition={{ staggerChildren: 0.15, delayChildren: 0.8 }}
         >
-          {[FaFacebookF, FaTwitter, FaPinterestP, FaInstagram, FaLinkedinIn].map((Icon, i) => (
-            <motion.div key={i} variants={fadeInUp}>
-              <Icon className="hover:text-[#b08d57] transition" />
-            </motion.div>
-          ))}
+          <motion.a
+            href="https://www.instagram.com/estudio_aguileracirone/?igsh=MWUxd3Q1ZXM1bnA3aw%3D%3D&utm_source=qr#"
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={fadeInUp}
+            className="hover:text-[#b08d57] text-[#b08d57] transition text-2xl"
+          >
+            <FaInstagram />
+          </motion.a>
         </motion.div>
       </motion.div>
     </motion.section>

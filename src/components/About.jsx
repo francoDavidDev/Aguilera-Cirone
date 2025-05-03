@@ -12,7 +12,6 @@ const galleryImages = [
 const About = () => {
   return (
     <section id="about" className="relative h-[90vh] bg-[#0c0c0c] text-white py-20 px-6 overflow-hidden">
-      
       {/* Imagen decorativa lateral con animación */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -28,7 +27,6 @@ const About = () => {
       </motion.div>
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        
         {/* Texto a la derecha */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -37,18 +35,16 @@ const About = () => {
           className="flex flex-col justify-center md:pl-20"
         >
           <h2 className="text-3xl md:text-4xl font-bold font-serif mb-6">
-            Nuestra Firma de Abogados
+            ¿Quiénes somos?
           </h2>
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            Somos <span className="text-white font-semibold">Estudio Juridico - Aguilera & Cirone</span>, un equipo de profesionales especializados en derecho penal, familiar, civil y comercial.
+          <p className="text-gray-300 mb-6 leading-relaxed italic">
+            Somos dos abogadas recibidas de la Facultad de Derecho de la Universidad de Buenos Aires, que tenemos la convicción y la pasión por nuestra profesión, la cual fue posible luego de varios años de esfuerzo y dedicación.
+            <br /><br />
+            La palabra "abogado", proviene del latín <strong>ABOGAR</strong> que significa ayudar. Esa será nuestra premisa primordial para poder aplicar nuestros conocimientos a las necesidades de nuestros patrocinados.
           </p>
 
           <div className="flex gap-6 mb-8 text-center">
-            {[
-              { label: "Años de experiencia", value: "15+" },
-              { label: "Casos resueltos", value: "300+" },
-              { label: "Clientes satisfechos", value: "100%" },
-            ].map((item, idx) => (
+            {[{ label: "Años de experiencia", value: "15+" }, { label: "Casos resueltos", value: "300+" }, { label: "Clientes satisfechos", value: "100%" }].map((item, idx) => (
               <div key={idx}>
                 <p className="text-2xl font-bold">{item.value}</p>
                 <p className="text-gray-400 text-sm">{item.label}</p>
@@ -63,17 +59,9 @@ const About = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-4 bg-white text-[#1A2238] px-6 py-3 font-sans font-semibold shadow hover:shadow-md hover:bg-amber-400/70 transition"
           >
-            <img
-              src={logo}
-              alt="Logo del Estudio"
-              className="w-5 h-5 object-contain"
-            />
+            <img src={logo} alt="Logo del Estudio" className="w-5 h-5 object-contain" />
             <span className="text-center">¿Tenés dudas? Hablá con nosotros</span>
-            <img
-              src={logo}
-              alt="Logo del Estudio"
-              className="w-5 h-5 object-contain"
-            />
+            <img src={logo} alt="Logo del Estudio" className="w-5 h-5 object-contain" />
           </a>
         </motion.div>
 
@@ -97,10 +85,7 @@ const About = () => {
               key={index}
               src={img}
               alt={`Profesional ${index + 1}`}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className={`shadow-xl w-full h-[200px] object-cover object-top ${index === 0 ? 'row-span-2 h-[420px]' : ''}`}
             />

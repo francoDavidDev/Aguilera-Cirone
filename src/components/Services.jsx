@@ -8,7 +8,7 @@ import logo from "../assets/imgs/logo2.png"; // Asegurate que la ruta sea correc
 const services = [
   {
     title: "Derecho Civil",
-    description: "Contratos, sucesiones, relaciones personales.",
+    description: "Contratos, sucesiones, Cuotas de alimentos.",
     image: civil,
     mensaje: "Hola, estoy interesado en el servicio de DERECHO CIVIL.",
   },
@@ -20,7 +20,7 @@ const services = [
   },
   {
     title: "Derecho Laboral",
-    description: "Despidos y accidentes laborales.",
+    description: "Despidos, accidentes laborales y Redacción de Carta Documento.",
     image: laboral,
     mensaje: "Hola, estoy interesado en el servicio de DERECHO LABORAL.",
   },

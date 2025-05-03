@@ -1,7 +1,7 @@
 const WhatsappButton = () => {
   return (
     <a
-      href="https://wa.me/541121736846"
+      href="https://wa.me/541165683058"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-5 right-5 z-50 p-4 bg-gold text-white rounded-full shadow-lg bg-green-500 hover:bg-green-600 transition duration-300"
