@@ -56,7 +56,7 @@ const Footer = () => {
               Teléfono: +54 11 6568-3058
             </a>
           </p>
-          <p className="text-gray-300">Email: estudioagileracigore@gmail.com</p>
+          <p className="text-gray-300">Email: estudioaguileracirone@gmail.com</p>
       
         </motion.div>
       </motion.div>
