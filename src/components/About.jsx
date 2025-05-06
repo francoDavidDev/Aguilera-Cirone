@@ -6,7 +6,6 @@ const galleryImages = [
   "https://img.freepik.com/foto-gratis/hombre-negocios-brazos-cruzados-sobre-fondo-blanco_1368-5998.jpg",
   "https://img.freepik.com/foto-gratis/joven-empresaria-gafas_329181-11694.jpg",
   "https://img.freepik.com/foto-gratis/mujer-sonriente-chaqueta-marron_1098-1290.jpg",
-  "https://img.freepik.com/foto-gratis/retrato-hispano-limpio-delgado-natural_1368-2048.jpg"
 ];
 
 const About = () => {
