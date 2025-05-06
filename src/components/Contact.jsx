@@ -146,7 +146,7 @@ const Contact = () => {
             className="text-sm uppercase tracking-wider text-gray-400 mb-4"
             variants={fadeInUp}
           >
-            Si tenés alguna duda, no dudes en enviarnos un mensaje.
+            Si tenés alguna inquietud, no dudes en enviarnos un mensaje.
           </motion.h3>
           <motion.form
             ref={formRef}
