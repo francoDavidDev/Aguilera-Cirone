@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from '../assets/imgs/logo2.png';
 
 const Navbar = () => {
@@ -24,33 +25,57 @@ const Navbar = () => {
         />
       </ScrollLink>
 
-      {/* Botón hamburguesa */}
+      {/* Botón hamburguesa / cruz con animación */}
       <button
         onClick={toggleMenu}
-        className="md:hidden text-white focus:outline-none"
-        aria-label="Abrir menú"
+        className="md:hidden text-white focus:outline-none z-50 relative w-8 h-8"
+        aria-label="Abrir o cerrar menú"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d={open ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-          />
-        </svg>
+        <AnimatePresence mode="wait" initial={false}>
+          {open ? (
+            <motion.svg
+              key="close"
+              initial={{ opacity: 0, rotate: -90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0, rotate: 90 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-0 left-0 w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </motion.svg>
+          ) : (
+            <motion.svg
+              key="menu"
+              initial={{ opacity: 0, rotate: 90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0, rotate: -90 }}
+              transition={{ duration: 0.3, delay: 0.15 }}
+              className="absolute top-0 left-0 w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </motion.svg>
+          )}
+        </AnimatePresence>
       </button>
 
       {/* Sidebar mobile */}
       <div className={`fixed top-0 right-0 h-full w-[250px] bg-[#1A2238] p-8 shadow-lg transform transition-transform duration-300 ease-in-out md:hidden ${open ? "translate-x-0" : "translate-x-full"}`}>
-        {/* Botón cerrar */}
-        <button
-          onClick={closeMenu}
-          className="absolute top-4 right-4 text-white text-2xl"
-          aria-label="Cerrar menú"
-        >
-          &times;
-        </button>
-
         <ul className="space-y-6 mt-20">
           {[
             { label: "Inicio", to: "hero" },
