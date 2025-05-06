@@ -9,9 +9,9 @@ import {
 import emailjs from "@emailjs/browser";
 import EmailStatusModal from "../components/EmailStatusModal";
 
-const SERVICE_ID = "service_84tylmx";
-const TEMPLATE_ID = "template_vtwtwji";
-const PUBLIC_KEY = "dKzwb8IHB3n5EWoSc";
+const SERVICE_ID = "service_r1wdemo";
+const TEMPLATE_ID = "template_o19b3o3";
+const PUBLIC_KEY = "ohiQcA5q8g47JdngV";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -35,7 +35,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const [emailStatus, setEmailStatus] = useState(""); // 'success' o 'error'
+  const [emailStatus, setEmailStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
