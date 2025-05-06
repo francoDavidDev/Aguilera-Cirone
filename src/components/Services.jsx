@@ -8,7 +8,7 @@ import logo from "../assets/imgs/logo2.png"; // Asegurate que la ruta sea correc
 const services = [
   {
     title: "Derecho Civil",
-    description: "Contratos, sucesiones, Cuotas de alimentos.",
+    description: "Divorcios, Sucesiones , cuota de alimentos.",
     image: civil,
     mensaje: "Hola, estoy interesado en el servicio de DERECHO CIVIL.",
   },
