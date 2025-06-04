@@ -1,7 +1,17 @@
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const EmailStatusModal = ({ isOpen, status, onClose }) => {
   const isSuccess = status === "success";
+
+  // Evento de conversión de Google Ads
+  useEffect(() => {
+    if (isOpen && isSuccess && typeof window.gtag === "function") {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-10950443891/T3QyCOGUj9IaEPOGyuUo',
+      });
+    }
+  }, [isOpen, isSuccess]);
 
   return (
     <AnimatePresence>
