@@ -73,6 +73,15 @@ const Hero = () => {
           Consultanos por WhatsApp
         </motion.a>
 
+        {/* Consulta gratis */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="mt-4 text-sm text-gray-300 italic"
+        >
+          Primera consulta sin cargo
+        </motion.p>
       </motion.div>
 
       {/* Valores sobre el banner */}

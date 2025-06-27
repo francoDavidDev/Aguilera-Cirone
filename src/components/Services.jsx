@@ -3,12 +3,12 @@ import penal from "../assets/imgs/services/penal.jpg";
 import laboral from "../assets/imgs/services/laboral.jpg";
 import comercial from "../assets/imgs/services/comercial.jpg";
 import civil from "../assets/imgs/services/civil.jpg";
-import logo from "../assets/imgs/logo2.png"; // Asegurate que la ruta sea correcta
+import logo from "../assets/imgs/logo2.png";
 
 const services = [
   {
     title: "Derecho Civil",
-    description: "Divorcios, Sucesiones , cuota de alimentos.",
+    description: "Divorcios, Sucesiones , cuota de alimentos.",
     image: civil,
     mensaje: "Hola, estoy interesado en el servicio de DERECHO CIVIL.",
   },
@@ -33,7 +33,7 @@ const services = [
 ];
 
 const Services = () => (
-  <section className="h-screen px-6 pt-10 pb-10 bg-[#1A2238] text-white" id="services">
+  <section className="h-auto px-6 pt-10 pb-10 bg-[#1A2238] text-white" id="services">
     {/* Título */}
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -68,7 +68,7 @@ const Services = () => (
     </motion.div>
 
     {/* Acordeón horizontal */}
-    <div className="flex flex-col md:flex-row h-[400px] md:h-[70vh] max-w-7xl mx-auto overflow-hidden shadow-lg ">
+    <div className="flex flex-col md:flex-row h-[400px] md:h-[70vh] max-w-7xl mx-auto overflow-hidden shadow-lg">
       {services.map(({ title, description, image, mensaje }, index) => (
         <a
           key={index}
@@ -86,7 +86,7 @@ const Services = () => (
             <img
               src={image}
               alt={title}
-              className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 group-hover:scale-110"
+              className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-110"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:bg-black/60 z-10 transition-all duration-500" />
@@ -109,11 +109,16 @@ const Services = () => (
       transition={{ duration: 0.6, delay: 0.4 }}
       className="text-center mt-10"
     >
+      {/* Frase adicional */}
+      <p className="mb-4 text-sm text-gray-300 italic">
+        Primera consulta sin compromiso.
+      </p>
+
       <a
         href="https://wa.me/5491165683058?text=Hola,%20tengo%20una%20consulta%20legal"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-3 bg-white text-[#1A2238] px-6 py-3 font-sans font-semibold  shadow hover:shadow-md hover:bg-[#b08d57]/70 transition"
+        className="inline-flex items-center gap-3 bg-white text-[#1A2238] px-6 py-3 font-sans font-semibold shadow hover:shadow-md hover:bg-[#b08d57]/70 transition"
       >
         ¿Tenés dudas? Hablá con nosotros
         <img

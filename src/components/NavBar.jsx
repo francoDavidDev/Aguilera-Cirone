@@ -25,7 +25,7 @@ const Navbar = () => {
         />
       </ScrollLink>
 
-      {/* Botón hamburguesa / cruz con animación */}
+      {/* Botón hamburguesa */}
       <button
         onClick={toggleMenu}
         className="md:hidden text-white focus:outline-none z-50 relative w-8 h-8"
@@ -97,6 +97,18 @@ const Navbar = () => {
               </ScrollLink>
             </li>
           ))}
+
+          {/* CTA mobile */}
+          <li>
+            <a
+              href="https://wa.me/5491165683058?text=Hola,%20quiero%20hacer%20una%20consulta%20gratuita"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-[#b08d57] font-semibold border border-[#b08d57] px-4 py-2 text-center transition hover:bg-[#b08d57] hover:text-black"
+            >
+              Consulta Gratis
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -121,6 +133,18 @@ const Navbar = () => {
             </ScrollLink>
           </li>
         ))}
+
+        {/* CTA desktop */}
+        <li>
+          <a
+            href="https://wa.me/5491165683058?text=Hola,%20quiero%20hacer%20una%20consulta%20gratuita"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white bg-[#b08d57] px-4 py-2 rounded-md font-medium transition hover:bg-[#c49b5f]"
+          >
+            Consulta Gratis
+          </a>
+        </li>
       </ul>
     </nav>
   );

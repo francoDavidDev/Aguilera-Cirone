@@ -38,7 +38,12 @@ const Footer = () => {
           <p className="text-gray-300">Estudio Jurídico</p>
         </motion.div>
 
-        <motion.div variants={itemVariants}>
+        <motion.div variants={itemVariants} className="text-center md:text-left">
+          {/* CTA destacada */}
+          <p className="text-[#b08d57] font-semibold mb-4">
+            ¿Tenés dudas? Tu primera consulta es gratuita.
+          </p>
+
           <p className="text-white font-medium mb-1">Dirección:</p>
           <p className="text-gray-300">Argentina</p>
           <p className="text-gray-300">Buenos Aires, CABA</p>
@@ -57,7 +62,6 @@ const Footer = () => {
             </a>
           </p>
           <p className="text-gray-300">Email: estudioaguileracirone@gmail.com</p>
-      
         </motion.div>
       </motion.div>
 

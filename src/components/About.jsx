@@ -10,7 +10,7 @@ const galleryImages = [
 
 const About = () => {
   return (
-    <section id="about" className="relative h-[90vh] bg-[#0c0c0c] text-white py-20 px-6 overflow-hidden">
+    <section id="about" className="relative h-auto bg-[#0c0c0c] text-white py-20 px-6 overflow-hidden">
       {/* Imagen decorativa lateral con animación */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ const About = () => {
             La palabra "abogado", proviene del latín <strong>ABOGAR</strong> que significa ayudar. Esa será nuestra premisa primordial para poder aplicar nuestros conocimientos a las necesidades de nuestros patrocinados.
           </p>
 
-          <div className="flex gap-6 mb-8 text-center">
+          <div className="flex gap-6 mb-6 text-center">
             {[{ label: "Años de experiencia", value: "15+" }, { label: "Casos resueltos", value: "300+" }, { label: "Clientes satisfechos", value: "100%" }].map((item, idx) => (
               <div key={idx}>
                 <p className="text-2xl font-bold">{item.value}</p>
@@ -50,6 +50,11 @@ const About = () => {
               </div>
             ))}
           </div>
+
+          {/* Frase añadida */}
+          <p className="text-[#b08d57] italic mb-6">
+            Escribinos, tu primera consulta es gratuita.
+          </p>
 
           {/* Botón sin bordes redondeados */}
           <a

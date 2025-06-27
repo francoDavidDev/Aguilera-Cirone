@@ -74,7 +74,7 @@ const Contact = () => {
     <>
       <motion.section
         id="contacto"
-        className="min-h-screen bg-[#0c0c0c] text-white py-20 px-6"
+        className="h-auto bg-[#0c0c0c] text-white py-20 px-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
